@@ -13,7 +13,6 @@ config/name="EcoChain"
 config/version="1.0.0"
 run/main_scene="res://scenes/main_menu.tscn"
 config/features=PackedStringArray("4.0", "GL_TEXTURES_PVRTC")
-config/icon="res://assets/images/icon.png"
 
 [autoload]
 GameManager="*res://scripts/game_manager.gd"
