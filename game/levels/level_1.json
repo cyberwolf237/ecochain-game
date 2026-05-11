@@ -1,0 +1,46 @@
+{
+  "level_number": 1,
+  "biome": "Rainforest",
+  "name": "Life Begins",
+  "description": "Learn the basics of ecosystems by building a simple food chain.",
+  "objective": "Keep all organisms alive for 20 turns",
+  "target_population": 30,
+  "max_turns": 20,
+  "difficulty": "easy",
+  "starting_organisms": [
+    {
+      "species": "Grass",
+      "type": "plant",
+      "population": 20,
+      "x": 2,
+      "y": 2
+    },
+    {
+      "species": "Rabbit",
+      "type": "herbivore",
+      "population": 5,
+      "x": 5,
+      "y": 5
+    },
+    {
+      "species": "Fox",
+      "type": "carnivore",
+      "population": 2,
+      "x": 7,
+      "y": 7
+    }
+  ],
+  "science_facts": [
+    "Plants are producers - they create energy from the sun",
+    "Herbivores are primary consumers - they eat plants",
+    "Carnivores are secondary consumers - they eat herbivores",
+    "Food chains show the flow of energy through ecosystems",
+    "Ecosystems need balance to survive"
+  ],
+  "hints": [
+    "Make sure you have enough plants for the rabbits",
+    "Predators need prey to survive",
+    "Population growth depends on available food",
+    "Try to keep populations stable"
+  ]
+}

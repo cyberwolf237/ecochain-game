@@ -1,0 +1,78 @@
+[gd_scene load_steps=1 format=3 uid="uid://djk2cy0ug4hy3"]
+
+[node name="MainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+
+[node name="Background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.2, 0.4, 0.2, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -200.0
+offset_right = 150.0
+offset_bottom = 200.0
+
+[node name="Title" type="Label" parent="VBoxContainer"]
+text = "🌍 EcoChain"
+theme_override_font_sizes/font_size = 64
+alignment = 1
+
+[node name="Subtitle" type="Label" parent="VBoxContainer"]
+text = "Educational Ecosystem Game"
+theme_override_font_sizes/font_size = 24
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="PlayButton" type="Button" parent="VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "▶️ PLAY"
+theme_override_font_sizes/font_size = 32
+
+[node name="SandboxButton" type="Button" parent="VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "🎨 SANDBOX"
+theme_override_font_sizes/font_size = 32
+
+[node name="SettingsButton" type="Button" parent="VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "⚙️ SETTINGS"
+theme_override_font_sizes/font_size = 32
+
+[node name="AchievementsButton" type="Button" parent="VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "🏆 ACHIEVEMENTS"
+theme_override_font_sizes/font_size = 32
+
+[node name="QuitButton" type="Button" parent="VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "👋 QUIT"
+theme_override_font_sizes/font_size = 32
+
+[connection signal="pressed" from="VBoxContainer/MarginContainer/VBoxContainer/PlayButton" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/MarginContainer/VBoxContainer/SandboxButton" to="." method="_on_sandbox_pressed"]
+[connection signal="pressed" from="VBoxContainer/MarginContainer/VBoxContainer/SettingsButton" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="VBoxContainer/MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_pressed"]

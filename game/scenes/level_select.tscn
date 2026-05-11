@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://d4yw91tyhe3i"]
+
+[node name="LevelSelect" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+
+[node name="Background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.15, 0.3, 0.15, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_top = 20.0
+margin_right = -20.0
+margin_bottom = -20.0
+
+[node name="Title" type="Label" parent="VBoxContainer"]
+text = "🌍 Select Biome & Level"
+theme_override_font_sizes/font_size = 48
+alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RainforestBiome" type="PanelContainer" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/VBoxContainer/RainforestBiome"]
+layout_mode = 2
+margin_left = 10.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = -10.0
+
+[node name="Label" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer/RainforestBiome/VBoxContainer"]
+text = "🌳 Rainforest (Unlocked)"
+theme_override_font_sizes/font_size = 28
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/ScrollContainer/VBoxContainer/RainforestBiome/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Level1" type="Button" parent="VBoxContainer/ScrollContainer/VBoxContainer/RainforestBiome/VBoxContainer/HBoxContainer"]
+text = "Level 1\n⭐⭐⭐"
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Level2" type="Button" parent="VBoxContainer/ScrollContainer/VBoxContainer/RainforestBiome/VBoxContainer/HBoxContainer"]
+text = "Level 2\n⭐⭐"
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Level3" type="Button" parent="VBoxContainer/ScrollContainer/VBoxContainer/RainforestBiome/VBoxContainer/HBoxContainer"]
+text = "Level 3\n⭐"
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="SavanaBiome" type="PanelContainer" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/VBoxContainer/SavanaBiome"]
+layout_mode = 2
+margin_left = 10.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = -10.0
+
+[node name="Label" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer/SavanaBiome/VBoxContainer"]
+text = "🦁 Savanna (Locked 🔒)"
+theme_override_font_sizes/font_size = 28
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/ScrollContainer/VBoxContainer/SavanaBiome/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+disabled = true
+
+[node name="BackButton" type="Button" parent="VBoxContainer"]
+text = "🔙 BACK TO MENU"
+theme_override_font_sizes/font_size = 24

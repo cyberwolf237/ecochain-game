@@ -1,0 +1,50 @@
+[gd_scene load_steps=2 format=3 uid="uid://dhmscnrdc5s5s"]
+
+[ext_resource type="Script" path="res://scripts/ecosystem_manager.gd"]
+
+[node name="GameLevel" type="Node2D"]
+
+[node name="EcosystemManager" type="Node2D" parent="."]
+script = ExtResource("res://scripts/ecosystem_manager.gd")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" type="Control" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/UI"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = -10.0
+
+[node name="HeaderLabel" type="Label" parent="CanvasLayer/UI/VBoxContainer"]
+text = "🎮 Level 1: Life Begins - Rainforest"
+theme_override_font_sizes/font_size = 32
+
+[node name="ResourcesLabel" type="Label" parent="CanvasLayer/UI/VBoxContainer"]
+text = "🔋 Energy: 100 | 💧 Water: 100 | 🌱 Nutrients: 100"
+theme_override_font_sizes/font_size = 20
+
+[node name="PopulationLabel" type="Label" parent="CanvasLayer/UI/VBoxContainer"]
+text = "👥 Population: 0 | 🔄 Turn: 0/20"
+theme_override_font_sizes/font_size = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/UI/VBoxContainer"]
+size_flags_vertical = 2
+margin_top = 20.0
+
+[node name="PauseButton" type="Button" parent="CanvasLayer/UI/VBoxContainer/HBoxContainer"]
+text = "⏸️ PAUSE"
+theme_override_font_sizes/font_size = 24
+
+[node name="HelpButton" type="Button" parent="CanvasLayer/UI/VBoxContainer/HBoxContainer"]
+text = "❓ HELP"
+theme_override_font_sizes/font_size = 24
+
+[node name="MenuButton" type="Button" parent="CanvasLayer/UI/VBoxContainer/HBoxContainer"]
+text = "📋 MENU"
+theme_override_font_sizes/font_size = 24
