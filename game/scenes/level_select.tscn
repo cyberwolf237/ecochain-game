@@ -1,9 +1,12 @@
-[gd_scene format=3 uid="uid://d4yw91tyhe3i"]
+[gd_scene load_steps=2 format=3 uid="uid://d4yw91tyhe3i"]
+
+[ext_resource type="Script" path="res://scripts/level_select.gd" id="1_u5l1l"]
 
 [node name="LevelSelect" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
+script = ExtResource("1_u5l1l")
 
 [node name="Background" type="ColorRect" parent="."]
 anchor_right = 1.0
@@ -50,19 +53,22 @@ layout_mode = 2
 size_flags_vertical = 3
 
 [node name="Level1" type="Button" parent="VBoxContainer/ScrollContainer/VBoxContainer/RainforestBiome/VBoxContainer/HBoxContainer"]
-text = "Level 1\n⭐⭐⭐"
+text = "Level 1
+⭐⭐⭐"
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Level2" type="Button" parent="VBoxContainer/ScrollContainer/VBoxContainer/RainforestBiome/VBoxContainer/HBoxContainer"]
-text = "Level 2\n⭐⭐"
+text = "Level 2
+⭐⭐"
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Level3" type="Button" parent="VBoxContainer/ScrollContainer/VBoxContainer/RainforestBiome/VBoxContainer/HBoxContainer"]
-text = "Level 3\n⭐"
+text = "Level 3
+⭐"
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -89,3 +95,8 @@ disabled = true
 [node name="BackButton" type="Button" parent="VBoxContainer"]
 text = "🔙 BACK TO MENU"
 theme_override_font_sizes/font_size = 24
+
+[connection signal="pressed" from="VBoxContainer/ScrollContainer/VBoxContainer/RainforestBiome/VBoxContainer/HBoxContainer/Level1" to="." method="_on_level_pressed" binds= ["Level1"]]
+[connection signal="pressed" from="VBoxContainer/ScrollContainer/VBoxContainer/RainforestBiome/VBoxContainer/HBoxContainer/Level2" to="." method="_on_level_pressed" binds= ["Level2"]]
+[connection signal="pressed" from="VBoxContainer/ScrollContainer/VBoxContainer/RainforestBiome/VBoxContainer/HBoxContainer/Level3" to="." method="_on_level_pressed" binds= ["Level3"]]
+[connection signal="pressed" from="VBoxContainer/BackButton" to="." method="_on_back_pressed"]
