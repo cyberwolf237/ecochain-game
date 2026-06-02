@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://dhmscnrdc5s5s"]
+[gd_scene load_steps=3 format=3 uid="uid://dhmscnrdc5s5s"]
 
 [ext_resource type="Script" path="res://scripts/ecosystem_manager.gd"]
+[ext_resource type="Script" path="res://scripts/game_level.gd"]
 
 [node name="GameLevel" type="Node2D"]
+script = ExtResource("res://scripts/game_level.gd")
 
 [node name="EcosystemManager" type="Node2D" parent="."]
 script = ExtResource("res://scripts/ecosystem_manager.gd")
@@ -48,3 +50,7 @@ theme_override_font_sizes/font_size = 24
 [node name="MenuButton" type="Button" parent="CanvasLayer/UI/VBoxContainer/HBoxContainer"]
 text = "📋 MENU"
 theme_override_font_sizes/font_size = 24
+
+[connection signal="pressed" from="CanvasLayer/UI/VBoxContainer/HBoxContainer/PauseButton" to="." method="_on_pause_pressed"]
+[connection signal="pressed" from="CanvasLayer/UI/VBoxContainer/HBoxContainer/HelpButton" to="." method="_on_help_pressed"]
+[connection signal="pressed" from="CanvasLayer/UI/VBoxContainer/HBoxContainer/MenuButton" to="." method="_on_menu_pressed"]
